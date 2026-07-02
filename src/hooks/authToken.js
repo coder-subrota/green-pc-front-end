@@ -4,7 +4,7 @@ const currentUser = {
 email:email , 
 }
 
-fetch("https://green-pc-server-1b9h-git-main-scs-666.vercel.app/jwt" , {
+fetch("https://green-pc-server-1b9h.vercel.app/jwt" , {
 method:"POST" ,
 headers:{
 "Content-Type" : "application/json"

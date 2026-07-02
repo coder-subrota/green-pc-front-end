@@ -64,7 +64,7 @@ const AddCategory = () => {
                     sellerEmail: user.email.trim(),
                     sellerProfile: user.photoURL.trim(),
                 }
-                fetch(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/categories`, {
+                fetch(`https://green-pc-server-1b9h.vercel.app/categories`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

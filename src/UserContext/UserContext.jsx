@@ -75,7 +75,7 @@ const UserContext = ({ children }) => {
     // ${loginEmail ? loginEmail : undefined}
 
     // React.useEffect(() => {
-    //     axios.get(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/${loginEmail}`)
+    //     axios.get(`https://green-pc-server-1b9h.vercel.app/${loginEmail}`)
     //         .then(res => setCurrentUser(res.data))
     //         .catch(error => console.log("Error : " + error));
 

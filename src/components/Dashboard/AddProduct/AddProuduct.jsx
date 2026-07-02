@@ -80,7 +80,7 @@ const AddProuduct = () => {
                     sellerProfile: user.photoURL.trim(),
                 }
                 if (!user.email) return toast.error("Your email is not found ");
-                fetch(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/products`, {
+                fetch(`https://green-pc-server-1b9h.vercel.app/products`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -122,14 +122,14 @@ const AddProuduct = () => {
     );
     //get category data
     React.useEffect(() => {
-        axios.get(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/categoriesName`)
+        axios.get(`https://green-pc-server-1b9h.vercel.app/categoriesName`)
             .then(res => setCategoryNames(res.data))
             .catch(error => console.log(error))
     }, []);
 
     React.useEffect(() => {
         if (!categoryName) return;
-        axios.get(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/categoriesInfo/${categoryName}`)
+        axios.get(`https://green-pc-server-1b9h.vercel.app/categoriesInfo/${categoryName}`)
             .then(res => setCategoryInfo(res.data))
             .catch(error => console.log(error))
     }, [categoryName]);

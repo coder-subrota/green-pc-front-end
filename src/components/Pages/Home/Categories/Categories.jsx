@@ -17,10 +17,10 @@ const Categories = () => {
     backgroundPosition: "center",
     backgroundSize: "cover",
   }
-  //hhttps://green-pc-server-1b9h-git-main-scs-666.vercel.app/
+  //https://green-pc-server-1b9h.vercel.app/
   const { data: categories, isLoading } = useQuery({
     queryKey: ['categories '],
-    queryFn: () => fetch(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/categories`, {
+    queryFn: () => fetch(`https://green-pc-server-1b9h.vercel.app/categories`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("pc-shop-only")}`

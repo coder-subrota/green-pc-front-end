@@ -50,7 +50,7 @@ export const routes = createBrowserRouter([
             {
                 path: "/available-products/:id",
                 loader: async ({ params }) =>
-                    fetch(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/availAbleProducts/${params.id}`, {
+                    fetch(`https://green-pc-server-1b9h.vercel.app/availAbleProducts/${params.id}`, {
                         headers: {
                             authorization: `Bearer ${localStorage.getItem("pc-shop-only")}`
                         }
@@ -60,7 +60,7 @@ export const routes = createBrowserRouter([
             {
                 path: "/payments/:id",
                 loader: async ({ params }) =>
-                    fetch(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/productPayment/${params.id}`, {
+                    fetch(`https://green-pc-server-1b9h.vercel.app/productPayment/${params.id}`, {
                         headers: {
                             authorization: `Bearer ${localStorage.getItem("pc-shop-only")}`
                         }
@@ -72,7 +72,7 @@ export const routes = createBrowserRouter([
             {
                 path: "/wishListproductPayment/:id",
                 loader: async ({ params }) =>
-                    fetch(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/wishListproductPayment/${params.id}`, {
+                    fetch(`https://green-pc-server-1b9h.vercel.app/wishListproductPayment/${params.id}`, {
                         headers: {
                             authorization: `Bearer ${localStorage.getItem("pc-shop-only")}`
                         }

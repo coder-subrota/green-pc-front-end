@@ -28,7 +28,7 @@ const RepotedItems = () => {
     const { data: repotedItems = [], isLoading, refetch } = useQuery({
         queryKey: ['repotedItems'],
         queryFn: () =>
-            fetch(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/repotedItems`, {
+            fetch(`https://green-pc-server-1b9h.vercel.app/repotedItems`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem("pc-shop-only")}`
                 }
@@ -50,7 +50,7 @@ const RepotedItems = () => {
         )
     }
     const handleReportDelete = (repotedItem) => {
-        axios.delete(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/deleteRepotedItems/${repotedItem._id}`)
+        axios.delete(`https://green-pc-server-1b9h.vercel.app/deleteRepotedItems/${repotedItem._id}`)
             .then(res => {
                 if (res.data.deletedCount > 0) {
                     toast.success("Congrasulations you are deleted repoted item successfully !! ")

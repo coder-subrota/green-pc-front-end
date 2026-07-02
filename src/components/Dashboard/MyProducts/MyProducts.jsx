@@ -20,7 +20,7 @@ const MyProducts = () => {
     const { data: totalMyProducts = [email], isLoading, refetch } = useQuery({
         queryKey: ['sellers'],
         queryFn: () =>
-            fetch(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/products/${email}`, {
+            fetch(`https://green-pc-server-1b9h.vercel.app/products/${email}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem("pc-shop-only")}`
                 }
@@ -55,7 +55,7 @@ const MyProducts = () => {
     )
     //
     const handleAddproduct = (id) => {
-        axios.put(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/products/${id}`)
+        axios.put(`https://green-pc-server-1b9h.vercel.app/products/${id}`)
             .then(res => {
                 if (res.data.modifiedCount > 0) {
                     toast.success("Your product added to advertise successfully ")
@@ -66,7 +66,7 @@ const MyProducts = () => {
     }
     const hadleDelete = (deletdProduct) => {
         const id = deletdProduct._id
-        axios.delete(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/products/${id}`)
+        axios.delete(`https://green-pc-server-1b9h.vercel.app/products/${id}`)
             .then(res => {
                 if (res.data.deletedCount > 0) {
                     toast.success("Your one product item is deleted ")

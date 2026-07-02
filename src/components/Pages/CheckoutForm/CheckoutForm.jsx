@@ -31,7 +31,7 @@ const CheckoutForm = ({product}) => {
    productsId : productsId ? productsId : ordersId ,
   }
  const upateDocument = (updateData) => {
-    axios.put("https://green-pc-server-1b9h-git-main-scs-666.vercel.app/updateDatabase" , updateData)
+    axios.put("https://green-pc-server-1b9h.vercel.app/updateDatabase" , updateData)
     .then(res  => res.data ) 
     .then(error => toast.error(error.message)) ;
  }
@@ -55,10 +55,10 @@ const CheckoutForm = ({product}) => {
         }
     );
     //
-//https://green-pc-server-1b9h-git-main-scs-666.vercel.app/
-//https://green-pc-server-1b9h-git-main-scs-666.vercel.app/
-//https://green-pc-server-1b9h-git-main-scs-666.vercel.app/
-        axios.post("https://green-pc-server-1b9h-git-main-scs-666.vercel.app/create-payment-intent", price)
+//https://green-pc-server-1b9h.vercel.app/
+//https://green-pc-server-1b9h.vercel.app/
+//https://green-pc-server-1b9h.vercel.app/
+        axios.post("https://green-pc-server-1b9h.vercel.app/create-payment-intent", price)
             .then((res) => {
                 const clientSecret = res.data.clientSecret;
                 stripe.confirmCardPayment(clientSecret, {

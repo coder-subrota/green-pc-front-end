@@ -26,7 +26,7 @@ const AllAvailableProducts = () => {
     const { data: productItems = [], isLoading, refetch } = useQuery({
         queryKey: ['sellers'],
         queryFn: () =>
-            fetch(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/availAbleProducts/${categoryId}`, {
+            fetch(`https://green-pc-server-1b9h.vercel.app/availAbleProducts/${categoryId}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem("pc-shop-only")}`
                 }
@@ -55,7 +55,7 @@ const AllAvailableProducts = () => {
 
     React.useEffect(() => {
         //get all users 
-        axios.get("https://green-pc-server-1b9h-git-main-scs-666.vercel.app/users")
+        axios.get("https://green-pc-server-1b9h.vercel.app/users")
             .then(res => setSellerInfo(res.data))
             .then(error => toast.error(error.message));
     }, []);
@@ -67,7 +67,7 @@ const AllAvailableProducts = () => {
             buyerEmail: user?.email,
             productId: productItem._id,
         }
-        axios.put(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/wishList/`, wishtListInfo)
+        axios.put(`https://green-pc-server-1b9h.vercel.app/wishList/`, wishtListInfo)
             .then(res => {
                 if (res.status === 403 || res.status === 401) {
                     return navigate("/")
@@ -84,7 +84,7 @@ const AllAvailableProducts = () => {
     }
 
     const handleReport = (product) => {
-        axios.put(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/repot/${product._id}`)
+        axios.put(`https://green-pc-server-1b9h.vercel.app/repot/${product._id}`)
             .then(res => {
                 if (res.data.modifiedCount > 0) {
 

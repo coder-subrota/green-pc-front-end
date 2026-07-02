@@ -13,7 +13,7 @@ const MyOrders = () => {
 const { data: orders = [email], isLoading  } = useQuery({
     queryKey: ['sellers'],
     queryFn: () =>
-        fetch(`https://green-pc-server-1b9h-git-main-scs-666.vercel.app/orders/${email}`, {
+        fetch(`https://green-pc-server-1b9h.vercel.app/orders/${email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem("pc-shop-only")}`
             }
